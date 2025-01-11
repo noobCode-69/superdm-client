@@ -1,4 +1,5 @@
 import React from 'react';
+import { X } from 'lucide-react';
 
 interface ModalProps {
   isOpen: boolean;
@@ -21,7 +22,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }
         tabIndex={-1}
       >
         <div className="flex justify-between items-center mb-4">
-          <h2 id="modal-title" className="text-lg font-bold">
+          <h2 id="modal-title" className="text-md font-bold">
             {title}
           </h2>
           <button
@@ -29,9 +30,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }
             className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-full p-1"
             aria-label="Close"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <X className='w-4 h-4' />
           </button>
         </div>
         <div>{children}</div>

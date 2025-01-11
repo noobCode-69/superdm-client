@@ -64,16 +64,18 @@ function ConfirmDialog({
     open,
     onOpenChange,
     handleStatusChange,
+    newStatus
 }: {
     open: boolean;
     onOpenChange: (open: boolean) => void;
     handleStatusChange: (comment: string) => void;
+    newStatus: StatusEnum
 }) {
     const [comment, setComment] = useState("");
-
+    const newStatusLable = taskTabs.find((tab) => tab.value === newStatus)?.label;
     return (
         <Modal
-            title="Are you sure to change the status ?"
+            title={`Are you sure to change to "${newStatusLable}" ?`}
             isOpen={open}
             onClose={() => onOpenChange(false)}
         >
@@ -304,6 +306,7 @@ export default function TaskModal({
                     handleStatusChange={handleStatusChange}
                     open={confirmModalOpen}
                     onOpenChange={setConfirmModalOpen}
+                    newStatus={newStatus}
                 />
             )}
         </>
