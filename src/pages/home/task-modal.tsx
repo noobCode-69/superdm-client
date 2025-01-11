@@ -195,12 +195,11 @@ export default function TaskModal({
         setConfirmModalOpen(false);
     }, [activeTaskIndex]);
 
-    const isBlocked = (direction: number): boolean => {
-        return (
-            tasks.length === 0 ||
-            activeTaskIndex >= tasks.length ||
-            (direction === -1 && activeTaskIndex === 0)
-        );
+    const isBlocked = (direction: 1 | -1): boolean => {
+        console.log(activeTaskIndex, direction)
+        if (activeTaskIndex === 0 && direction === -1) return true;
+        if (activeTaskIndex === tasks.length - 1 && direction === 1) return true;
+        return false;
     };
 
     const handleStatusChange = (comment: string) => {

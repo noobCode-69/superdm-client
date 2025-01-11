@@ -222,7 +222,7 @@ function Table({
                 </div>
             </div>
 
-            {taskModalOpen && <TaskModal
+            {taskModalOpen && filteredAndSortedTasks.length > 0 && <TaskModal
                 open={taskModalOpen}
                 tasks={filteredAndSortedTasks}
                 activeTaskIndex={focusedTaskIndex}
