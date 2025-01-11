@@ -8,6 +8,7 @@ Frontend client for the SuperDM task management system. Built with React.js, Typ
 - TypeScript
 - Vite
 - npm
+- Cloud - Vercel
 
 ## Prerequisites
 
