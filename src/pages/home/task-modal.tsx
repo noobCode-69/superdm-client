@@ -241,7 +241,7 @@ export default function TaskModal({
                             #{activeTask.id} {activeTask.name}
                         </DialogTitle>
                     </DialogHeader>
-                    <div>
+                    <div className="mb-5">
                         <div className="space-y-6">
                             <div className="space-y-4">
                                 <p className="text-sm text-muted-foreground">
