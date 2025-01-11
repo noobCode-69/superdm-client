@@ -16,11 +16,13 @@ Frontend client for the SuperDM task management system. Built with React.js, Typ
 
 ## Quick Start
 
+Make sure the SuperDM Task Server is running first. If you haven't set up the server, please follow the instructions in the server repository's README.md.
+
 ### 1. Clone the Repository
 
 ```bash
 git clone [repository-url]
-cd superdm-task-client
+cd superdm-client
 ```
 
 ### 2. Install Dependencies
