@@ -141,6 +141,20 @@ function Table({
         setFocusedTaskIndex(0);
     }, [activeTab, searchQuery, label, sortBy, assignee]);
 
+    useEffect(() => {
+        scrollToFocusedTask();
+    }, [focusedTaskIndex]);
+
+    const scrollToFocusedTask = () => {
+        const taskRow = document.getElementById(`task-row-${focusedTaskIndex}`);
+        if (taskRow) {
+            taskRow.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
+    }
+
     const filteredAndSortedTasks = filterAndSortTasks(
         tasks,
         {
@@ -175,6 +189,7 @@ function Table({
                     >
                         {filteredAndSortedTasks.map((data, index) => (
                             <div
+                                id={`task-row-${index}`}
                                 style={{
                                     outline:
                                         focusedTaskIndex === index ? "2px solid blue" : "none",
