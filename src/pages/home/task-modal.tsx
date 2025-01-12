@@ -145,20 +145,38 @@ const ChangeStatus = ({
   }, []);
 
   return (
-    <div className="text-sm border rounded-md">
-      {taskTabs.map(({ label, value }) => (
+    <div className="flex gap-2 items-stretch">
+      <div className="text-sm border rounded-md">
+        {taskTabs.map(({ label, value }) => (
+          <span
+            onClick={() => {
+              onStatusChange(value);
+            }}
+            key={value}
+            className={`px-3 py-1 hover:cursor-pointer hover:bg-muted flex flex-col w-full ${value === status ? "bg-muted" : ""
+              }`}
+          >
+            {label}
+          </span>
+        ))}
+      </div>
+      <div className="text-xs italic flex flex-col text-muted-foreground rounded-md">
         <span
-          onClick={() => {
-            onStatusChange(value);
-          }}
-          key={value}
-          className={`px-3 py-1 hover:cursor-pointer hover:bg-muted flex flex-col w-full ${
-            value === status ? "bg-muted" : ""
-          }`}
+          className={`grow hover:cursor-pointer hover:bg-muted flex items-center justify-center flex-col w-full}`}
         >
-          {label}
+          Press 1
         </span>
-      ))}
+        <span
+          className={`grow hover:cursor-pointer hover:bg-muted flex items-center justify-center flex-col w-full}`}
+        >
+          Press 2
+        </span>
+        <span
+          className={`grow hover:cursor-pointer hover:bg-muted flex items-center justify-center flex-col w-full}`}
+        >
+          Press 3
+        </span>
+      </div>
     </div>
   );
 };
