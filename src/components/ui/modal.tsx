@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback } from 'react';
 import { X } from 'lucide-react';
 
 interface ModalProps {
@@ -35,7 +35,10 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }
             {title}
           </h2>
           <button
-            onClick={onClose}
+            onClick={() => {
+              onClose();
+            }}
+            autoFocus
             className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-full p-1"
             aria-label="Close"
           >

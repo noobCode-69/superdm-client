@@ -113,14 +113,19 @@ function Table({
                 return;
             }
             if (event.key === "ArrowUp" && !taskModalOpen) {
+                event.preventDefault();
                 setFocusedTaskIndex((prev) => Math.max(0, prev - 1));
             } else if (event.key === "ArrowDown" && !taskModalOpen) {
+                event.preventDefault();
                 setFocusedTaskIndex((prev) => Math.min(filteredAndSortedTasks.length - 1, prev + 1));
             } else if (event.key === "Enter" && !taskModalOpen) {
+                event.preventDefault();
                 setTaskModalOpen(true);
             } else if (event.key === 'ArrowLeft' && taskModalOpen) {
+                event.preventDefault();
                 setFocusedTaskIndex((prev) => Math.max(0, prev - 1));
             } else if (event.key === 'ArrowRight' && taskModalOpen) {
+                event.preventDefault();
                 setFocusedTaskIndex((prev) => Math.min(filteredAndSortedTasks.length - 1, prev + 1));
             }
         };

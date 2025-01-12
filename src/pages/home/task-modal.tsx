@@ -114,10 +114,13 @@ const ChangeStatus = ({
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === "1") {
+                event.preventDefault();
                 onStatusChange(StatusEnum.OPEN);
             } else if (event.key === "2") {
+                event.preventDefault();
                 onStatusChange(StatusEnum.IN_PROGRESS);
             } else if (event.key === "3") {
+                event.preventDefault();
                 onStatusChange(StatusEnum.CLOSED);
             }
         };
