@@ -117,7 +117,6 @@ function Table({
             } else if (event.key === "ArrowDown" && !taskModalOpen) {
                 setFocusedTaskIndex((prev) => Math.min(filteredAndSortedTasks.length - 1, prev + 1));
             } else if (event.key === "Enter" && !taskModalOpen) {
-                console.log('opening')
                 setTaskModalOpen(true);
             } else if (event.key === 'ArrowLeft' && taskModalOpen) {
                 setFocusedTaskIndex((prev) => Math.max(0, prev - 1));
