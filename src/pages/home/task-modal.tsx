@@ -85,7 +85,7 @@ function ConfirmDialog({
       <DialogContent showOverlay={false} className="w-[450px]">
         <DialogHeader className="flex flex-row justify-between items-center">
           <DialogTitle className="text-md font-medium">
-            Are you sure to change the status to {newStatusLable}?
+            Are you sure to change the status to "{newStatusLable}"?
           </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground sr-only">
             changes status of task
