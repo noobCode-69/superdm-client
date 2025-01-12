@@ -162,17 +162,17 @@ const ChangeStatus = ({
       </div>
       <div className="text-xs italic flex flex-col text-muted-foreground rounded-md">
         <span
-          className={`grow hover:cursor-pointer hover:bg-muted flex items-center justify-center flex-col w-full}`}
+          className={`grow flex items-center justify-center flex-col w-full}`}
         >
           Press 1
         </span>
         <span
-          className={`grow hover:cursor-pointer hover:bg-muted flex items-center justify-center flex-col w-full}`}
+          className={`grow flex items-center justify-center flex-col w-full}`}
         >
           Press 2
         </span>
         <span
-          className={`grow hover:cursor-pointer hover:bg-muted flex items-center justify-center flex-col w-full}`}
+          className={`grow flex items-center justify-center flex-col w-full}`}
         >
           Press 3
         </span>
