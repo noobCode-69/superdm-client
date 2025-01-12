@@ -215,6 +215,8 @@ export default function TaskModal({
 
     const activeTask = tasks[activeTaskIndex];
 
+    if (!activeTask) return null;
+
     return (
         <>
             <Modal
